@@ -1,3 +1,7 @@
+import { useEffect, useRef } from 'react'
+
+import VanillaTilt from 'vanilla-tilt'
+
 import Image from '../Image'
 import {
   Container,
@@ -47,8 +51,14 @@ const colors = {
 }
 
 export default function Card({ pokemon }) {
+  const el = useRef(null)
+
+  useEffect(() => {
+    VanillaTilt.init(el.current)
+  }, [])
+
   return (
-    <Container>
+    <Container ref={el}>
       <PokeId>
         <span>{'# ' + pokemon.id.toString().padStart(3, '0')}</span>
       </PokeId>

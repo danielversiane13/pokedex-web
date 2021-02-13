@@ -13,6 +13,7 @@ export const Container = styled.div`
   max-height: 230px;
   align-items: center;
   background-color: #141e28;
+  user-select: none;
 `
 
 export const Detail = styled.div`
@@ -27,9 +28,6 @@ export const PokeId = styled.div`
   top: 0;
   left: 0;
   width: 100%;
-  -webkit-user-select: none; /* Safari */
-  -ms-user-select: none; /* IE 10 and IE 11 */
-  user-select: none; /* Standard syntax */
   cursor: default;
 
   span {
@@ -49,6 +47,7 @@ export const PokemonName = styled.span`
   font-size: 18px;
   text-transform: capitalize;
   color: #8a7f4b;
+  user-select: text;
 `
 
 export const PokeType = styled.div`
